@@ -1,0 +1,587 @@
+/* =========================================
+   PAAT PERE - GLOBAL RESPONSIVE STYLESHEET
+   Applies to Home, Menu, About, Gallery, Contact
+========================================= */
+
+/* GLOBAL RESPONSIVE RESET */
+* {
+    box-sizing: border-box;
+}
+html {
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body {
+    width: 100%;
+    min-width: 320px;
+    overflow-x: hidden;
+}
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+img {
+    height: auto;
+}
+button,
+input,
+textarea,
+select {
+    max-width: 100%;
+    font: inherit;
+}
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+.container,
+.wrapper,
+.page-container {
+    width: min(92%, 1290px);
+    margin-left: auto;
+    margin-right: auto;
+}
+section {
+    max-width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+    overflow-wrap: break-word;
+}
+table {
+    max-width: 100%;
+}
+
+/* COMMON HEADER AND NAVIGATION */
+header,
+.header,
+.navbar {
+    max-width: 100%;
+}
+.header-inner,
+.navbar-container {
+    width: 92%;
+    max-width: 1290px;
+    margin: auto;
+}
+nav ul,
+.nav,
+.nav-links {
+    list-style: none;
+}
+.menu-toggle,
+.hamburger,
+.mobile-menu-toggle {
+    cursor: pointer;
+}
+
+/* COMMON BUTTONS */
+.btn,
+button,
+.button,
+.cta-button {
+    max-width: 100%;
+    white-space: normal;
+    cursor: pointer;
+}
+
+/* COMMON IMAGE CARDS */
+.card img,
+.dish-card img,
+.menu-card img,
+.gallery-item img,
+.food-card img,
+.sweet-card img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* COMMON GRID SAFETY */
+.grid,
+.card-grid,
+.menu-grid,
+.gallery-grid,
+.dish-grid,
+.sweet-grid,
+.feature-grid,
+.footer-grid {
+    min-width: 0;
+}
+.grid > *,
+.card-grid > *,
+.menu-grid > *,
+.gallery-grid > *,
+.dish-grid > *,
+.sweet-grid > *,
+.feature-grid > *,
+.footer-grid > * {
+    min-width: 0;
+}
+
+/* FORMS */
+form {
+    width: 100%;
+    max-width: 100%;
+}
+input,
+textarea,
+select {
+    width: 100%;
+}
+textarea {
+    resize: vertical;
+}
+
+/* MAP AND EMBEDDED CONTENT */
+iframe {
+    width: 100%;
+    border: 0;
+}
+.map-container,
+.map-wrapper,
+.location-map {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* =========================================
+   LARGE TABLET AND SMALL LAPTOP
+   1024px
+========================================= */
+@media (max-width: 1024px) {
+    .container,
+    .wrapper,
+    .page-container {
+        width: 92%;
+    }
+
+    .header-inner,
+    .navbar-container {
+        width: 92%;
+    }
+
+    /* Navigation */
+    .nav,
+    .nav-links {
+        gap: 16px;
+    }
+
+    /* Common multi-column layouts */
+    .gallery-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .menu-grid,
+    .card-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .contact-container,
+    .contact-layout,
+    .about-layout {
+        gap: 25px;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* =========================================
+   TABLET
+   768px
+========================================= */
+@media (max-width: 768px) {
+    /* Navigation */
+    .menu-toggle,
+    .hamburger,
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .nav,
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 20px 5%;
+        background: var(--green-dark, #022d21);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        z-index: 999;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, .15);
+    }
+
+    .nav.open,
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav li,
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav a,
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    .header-btn,
+    .desktop-only {
+        display: none;
+    }
+
+    /* Typography */
+    h1 {
+        font-size: clamp(32px, 6vw, 46px);
+    }
+
+    h2 {
+        font-size: clamp(25px, 4.5vw, 35px);
+    }
+
+    /* Hero sections */
+    .hero,
+    .page-hero,
+    .gallery-hero,
+    .menu-hero,
+    .contact-hero,
+    .about-hero {
+        min-height: 300px;
+        height: auto;
+        background-position: center;
+    }
+
+    .hero-content,
+    .page-hero-content,
+    .gallery-hero-content {
+        max-width: 100%;
+    }
+
+    /* Grids */
+    .menu-grid,
+    .card-grid,
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dish-grid,
+    .sweet-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Two-column sections */
+    .signature-layout,
+    .sweets-layout,
+    .about-layout,
+    .contact-layout,
+    .contact-container,
+    .menu-layout,
+    .gallery-layout {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact form */
+    .contact-form,
+    .contact-info {
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Images */
+    .about-image,
+    .story-image,
+    .contact-image {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* =========================================
+   MOBILE
+   576px
+========================================= */
+@media (max-width: 576px) {
+    .container,
+    .wrapper,
+    .page-container {
+        width: 92%;
+    }
+
+    /* Header */
+    .header,
+    header,
+    .navbar {
+        min-height: 62px;
+    }
+
+    .header-inner,
+    .navbar-container {
+        min-height: 62px;
+        gap: 10px;
+    }
+
+    .brand-name,
+    .logo {
+        font-size: 23px;
+    }
+
+    /* Headings and text */
+    h1 {
+        font-size: clamp(30px, 9vw, 40px);
+        line-height: 1.15;
+    }
+
+    h2 {
+        font-size: 27px;
+        line-height: 1.2;
+    }
+
+    h3 {
+        font-size: 19px;
+    }
+
+    p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    /* Hero */
+    .hero,
+    .page-hero,
+    .gallery-hero,
+    .menu-hero,
+    .contact-hero,
+    .about-hero {
+        min-height: 330px;
+        padding: 45px 0;
+        text-align: center;
+    }
+
+    .hero-content,
+    .page-hero-content,
+    .gallery-hero-content {
+        width: 100%;
+        margin: auto;
+    }
+
+    .hero-buttons,
+    .hero-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Buttons */
+    .btn,
+    .button,
+    .cta-button {
+        padding: 10px 17px;
+        font-size: 12px;
+    }
+
+    /* Grid layouts */
+    .menu-grid,
+    .card-grid,
+    .gallery-grid,
+    .dish-grid,
+    .sweet-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Cards */
+    .dish-card img,
+    .menu-card img,
+    .food-card img,
+    .sweet-card img {
+        width: 100%;
+        height: 125px;
+        object-fit: cover;
+    }
+
+    .gallery-item {
+        min-width: 0;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    /* Gallery featured item */
+    .gallery-item:first-child {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    /* Filter buttons */
+    .filter-buttons,
+    .gallery-filters,
+    .menu-filters,
+    .category-filters {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    /* Search */
+    .search-box,
+    .menu-search {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* About and contact */
+    .about-layout,
+    .contact-layout,
+    .contact-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 12px;
+    }
+
+    .footer-column {
+        min-width: 0;
+    }
+
+    /* Spacing */
+    section {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE
+   380px
+========================================= */
+@media (max-width: 380px) {
+    .container,
+    .wrapper,
+    .page-container {
+        width: 94%;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .brand-name,
+    .logo {
+        font-size: 21px;
+    }
+
+    .menu-grid,
+    .card-grid,
+    .gallery-grid,
+    .dish-grid,
+    .sweet-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dish-card img,
+    .menu-card img,
+    .food-card img,
+    .sweet-card img {
+        height: 190px;
+    }
+
+    .gallery-item img {
+        height: 210px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons,
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-buttons .btn,
+    .hero-actions .btn {
+        width: 100%;
+        max-width: 230px;
+    }
+
+    .filter-buttons button,
+    .gallery-filters button,
+    .menu-filters button {
+        font-size: 11px;
+        padding: 8px 12px;
+    }
+}
+
+/* =========================================
+   EXTRA SMALL DEVICES
+   320px
+========================================= */
+@media (max-width: 320px) {
+    .container {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .brand-name {
+        font-size: 19px;
+    }
+
+    .btn {
+        padding: 9px 12px;
+        font-size: 11px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}

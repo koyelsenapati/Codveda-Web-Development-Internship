@@ -1,0 +1,159 @@
+
+.dashboard {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.main-content {
+  min-height: 100vh;
+}
+
+.sidebar {
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #FFFFFF35;
+  border-radius: 10px;
+}
+
+button {
+  transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+
+input,
+.auth-container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #faf7f2;
+}
+
+.auth-image {
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(32, 20, 13, 0.15), rgba(32, 20, 13, 0.8)), url("/images/cafe.jpg") center/cover no-repeat;
+  color: #fffaf4;
+}
+
+.image-overlay {
+  min-height: 100vh;
+  padding: 42px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.brand {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.image-overlay h1 {
+  max-width: 480px;
+  margin: 14px 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(38px, 4vw, 58px);
+  line-height: 1.15;
+}
+
+.image-overlay p {
+  max-width: 390px;
+  line-height: 1.7;
+  color: #eee2d7;
+}
+
+.image-overlay .eyebrow {
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.image-footer {
+  font-size: 13px;
+  color: #eee2d7;
+}
+
+.auth-form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 24px;
+}
+
+@media (max-width: 768px) {
+  .auth-container {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-image {
+    min-height: 280px;
+  }
+
+  .image-overlay {
+    min-height: 280px;
+    padding: 24px;
+  }
+
+  .image-overlay h1 {
+    font-size: 34px;
+  }
+
+  .auth-form-section {
+    padding: 40px 20px;
+  }
+}
+select {
+  font-family: 'DM Sans',sans-serif;
+}
+
+@media (max-width:760px) {
+  .sidebar {
+    width: 260px;
+    max-width: 85vw;
+  }
+
+  .sidebar-open {
+    box-shadow: 10px 0 35px #00000020;
+  }
+
+  .main-content {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .global-search {
+    min-width: 0;
+  }
+
+  .global-search input {
+    min-width: 0;
+  }
+
+  .notification-button {
+    flex-shrink: 0;
+  }
+
+  .profile-button {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+  }
+
+  .table-container {
+    padding-bottom: 5px;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  *,*::before,*::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}

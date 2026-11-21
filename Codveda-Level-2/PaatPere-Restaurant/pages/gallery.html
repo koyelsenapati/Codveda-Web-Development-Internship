@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore the food, flavours and heritage of Bengal through the Paat Pere gallery.">
+<title>Gallery | Paat Pere</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/gallery.css">
+<link rel="stylesheet" href="../css/responsive.css"></head>
+<body>
+<header class="header">
+    <div class="container header-inner">
+        <a href="home.html" class="brand">
+            <img src="../images/decor/kolka-leaves.png" alt="Paat Pere logo">
+            <span>
+                <span class="brand-name">Paat Pere</span>
+                <span class="brand-tag">A TASTE OF TRADITIONAL BENGAL</span>
+            </span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <nav>
+            <ul class="nav" id="navLinks">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="menu.html">Our Menu</a></li>
+                <li><a href="about.html">Our Story</a></li>
+                <li><a class="active" href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="contact.html" class="btn header-btn">♧ &nbsp; Reserve a Table</a>
+    </div>
+</header>
+
+<main>
+    <section class="gallery-hero">
+        <div class="container">
+            <span class="eyebrow">A Glimpse of Bengal</span>
+            <h1>Our <span>Gallery</span></h1>
+            <p>Discover the colours, flavours and traditions that make Bengali cuisine truly special.</p>
+        </div>
+    </section>
+
+    <section class="gallery-intro container">
+        <span class="eyebrow">Captured Moments</span>
+        <h2 class="section-title">A Taste Through Pictures</h2>
+        <p class="section-desc">From traditional delicacies to the cultural charm of Bengal, explore our world.</p>
+    </section>
+
+    <section class="container gallery-section">
+        <div class="gallery-filters" id="galleryFilters">
+            <button class="filter-btn active" data-filter="all">All Photos</button>
+            <button class="filter-btn" data-filter="food">Bengali Food</button>
+            <button class="filter-btn" data-filter="thali">Bengali Thali</button>
+            <button class="filter-btn" data-filter="sweets">Sweets</button>
+            <button class="filter-btn" data-filter="culture">Bengal Heritage</button>
+            <button class="filter-btn" data-filter="ambience">Restaurant</button>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+            <figure class="gallery-item large" data-category="thali">
+                <img src="../images/menu/bengali-thali.jpg" alt="Traditional Bengali thali" loading="lazy">
+                <figcaption><span>Traditional Feast</span><h3>The Bengali Thali</h3></figcaption>
+            </figure>
+            <figure class="gallery-item" data-category="food">
+                <img src="../images/menu/shorshe-ilish.jpg" alt="Hilsa fish in mustard sauce" loading="lazy">
+                <figcaption><span>Signature Dish</span><h3>Shorshe Ilish</h3></figcaption>
+            </figure>
+            <figure class="gallery-item" data-category="food">
+                <img src="../images/menu/kosha-mangsho-mutton.jpg" alt="Traditional Kosha Mangsho" loading="lazy">
+                <figcaption><span>Slow Cooked</span><h3>Kosha Mangsho</h3></figcaption>
+            </figure>
+            <figure class="gallery-item" data-category="sweets">
+                <img src="../images/menu/rosogolla.jpg" alt="Bengali Rosogolla" loading="lazy">
+                <figcaption><span>Sweet Tradition</span><h3>Rosogolla</h3></figcaption>
+            </figure>
+            <figure class="gallery-item" data-category="culture">
+                <img src="../images/hero/howrah-bridge.jpg" alt="Howrah Bridge in Kolkata" loading="lazy">
+                <figcaption><span>The City of Joy</span><h3>Howrah Bridge</h3></figcaption>
+            </figure>
+            <figure class="gallery-item" data-category="sweets">
+                <img src="../images/menu/mishti-doi.jpg" alt="Traditional Mishti Doi" loading="lazy">
+                <figcaption><span>Bengali Dessert</span><h3>Mishti Doi</h3></figcaption>
+            </figure>
+            <figure class="gallery-item" data-category="food">
+                <img src="../images/menu/chingri-malai-curry.jpg" alt="Chingri Malai Curry" loading="lazy">
+                <figcaption><span>Coastal Flavours</span><h3>Chingri Malai Curry</h3></figcaption>
+            </figure>
+            <figure class="gallery-item" data-category="ambience">
+                <img src="../images/gallery/restaurant-interior.jpg" alt="Traditional restaurant interior" loading="lazy">
+                <figcaption><span>Our Space</span><h3>Warm Hospitality</h3></figcaption>
+            </figure>
+            <figure class="gallery-item" data-category="sweets">
+                <img src="../images/menu/nolen-gur-sandesh.jpg" alt="Traditional Bengali Sandesh" loading="lazy">
+                <figcaption><span>Made with Love</span><h3>Sandesh</h3></figcaption>
+            </figure>
+            <figure class="gallery-item" data-category="ambience">
+                <img src="../images/gallery/dining.png" alt="Restaurant dining table" loading="lazy">
+                <figcaption><span>Gather Around</span><h3>Dining Experience</h3></figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="gallery-message">
+        <div class="container">
+            <span class="eyebrow">Our Heritage, Your Experience</span>
+            <h2>Every Picture Tells a Bengali Story</h2>
+            <p>Celebrate the food, culture and warmth of Bengal with Paat Pere.</p>
+            <a href="menu.html" class="btn">Explore Our Menu &nbsp; →</a>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <a href="home.html" class="footer-brand">
+                    <img src="../images/decor/kolka-leaves.png" alt="">
+                    Paat Pere
+                </a>
+                <p>A Taste of Traditional Bengal</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="menu.html">Our Menu</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="menu.html">Bengali Thali</a></li>
+                    <li><a href="menu.html">Fish Specialities</a></li>
+                    <li><a href="menu.html">Bengali Sweets</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Get in Touch</h3>
+                <ul>
+                    <li>📍 Location: To be announced</li>
+                    <li>☎ Phone: To be announced</li>
+                    <li>✉ Email: To be announced</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">© <span id="year"></span> Paat Pere. All Rights Reserved.</div>
+    </div>
+</footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image">×</button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous image">‹</button>
+    <img src="" alt="" id="lightboxImage">
+    <button class="lightbox-next" id="lightboxNext" aria-label="Next image">›</button>
+    <p id="lightboxCaption"></p>
+</div>
+
+<script src="../js/gallery.js" defer></script>
+</body>
+</html>

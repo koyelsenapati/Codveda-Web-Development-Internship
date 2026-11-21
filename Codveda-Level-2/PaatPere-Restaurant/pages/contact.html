@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Paat Pere for reservations, enquiries and special dining experiences.">
+    <title>Contact Us | Paat Pere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/pages.css">
+<link rel="stylesheet" href="../css/contact.css">
+<link rel="stylesheet" href="../css/responsive.css"></head>
+<body>
+    <header class="header">
+    <div class="header-inner">
+        <a href="home.html" class="brand">
+            <span>
+                <span class="brand-name">PAAT PERE.</span>
+                <span class="brand-tag">A TASTE OF TRADITIONAL BENGAL</span>
+            </span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <nav>
+            <ul class="nav" id="navLinks">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="menu.html">Our Menu</a></li>
+                <li><a href="about.html">Our Story</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="#contact-form" class="header-btn">Book a Table</a>
+    </div>
+</header>
+
+    <main>
+        <section class="contact-hero">
+            <div class="hero-overlay"></div>
+            <div class="contact-hero-content">
+                <span class="eyebrow">WE WOULD LOVE TO HEAR FROM YOU</span>
+                <h1>Get in <span>Touch</span></h1>
+                <p>Have a question, planning a celebration, or simply craving authentic Bengali food? Let's talk.</p>
+                <a href="#contact-section" class="gold-btn">Contact Us ↓</a>
+            </div>
+        </section>
+
+        <section class="contact-intro">
+            <span class="section-tag">LET'S CONNECT</span>
+            <h2>Every Good Meal Begins <span>With a Conversation.</span></h2>
+            <p>Whether you want to reserve a table, ask about our menu, or plan a special gathering, our team is here to help.</p>
+        </section>
+
+        <section class="contact-section" id="contact-section">
+            <div class="contact-info">
+                <span class="section-tag">CONTACT INFORMATION</span>
+                <h2>We Are Just a <span>Call Away.</span></h2>
+                <p class="info-description">Reach out to us for reservations, events, feedback, or any other enquiries.</p>
+
+                <div class="info-item">
+                    <div class="info-icon">⌖</div>
+                    <div>
+                        <h3>Our Location</h3>
+                        <p>Your Restaurant Address,<br>Kolkata, West Bengal, India</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">☎</div>
+                    <div>
+                        <h3>Phone Number</h3>
+                        <p>+91 XXXXX XXXXX</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">✉</div>
+                    <div>
+                        <h3>Email Address</h3>
+                        <p>hello@paatpere.com</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">◷</div>
+                    <div>
+                        <h3>Opening Hours</h3>
+                        <p>Monday – Sunday<br>12:00 PM – 10:30 PM</p>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <h3>Follow Our Journey</h3>
+                    <a href="#" aria-label="Instagram">IG</a>
+                    <a href="#" aria-label="Facebook">FB</a>
+                    <a href="#" aria-label="YouTube">YT</a>
+                </div>
+            </div>
+
+            <div class="contact-form-box" id="contactForm">
+                <span class="section-tag">SEND US A MESSAGE</span>
+                <h2>Let's Start a <span>Conversation.</span></h2>
+                <form id="contactFormElement">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select an option</option>
+                                <option value="Table Reservation">Table Reservation</option>
+                                <option value="Food Enquiry">Food Enquiry</option>
+                                <option value="Private Events">Private Events</option>
+                                <option value="Feedback">Feedback</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message <span>→</span></button>
+                    <p class="form-message" id="formMessage" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+
+        <section class="location-section">
+            <div class="location-heading">
+                <span class="section-tag">FIND US</span>
+                <h2>Come Visit <span>Us.</span></h2>
+                <p>Good food, warm hospitality, and a little taste of Bengal await you.</p>
+            </div>
+            <div class="map-placeholder">
+                <div class="map-content">
+                    <span class="map-pin">⌖</span>
+                    <h3>PAAT PERE</h3>
+                    <p>Kolkata, West Bengal, India</p>
+                    <span class="map-note">Google Maps embed can be added here.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-cta">
+            <span class="section-tag">A TABLE IS WAITING</span>
+            <h2>Make Memories Over <span a="">A Bengali Feast.</span></h2>
+            <p>Bring your loved ones and experience the flavours of Bengal.</p>
+            <a href="menu.html" class="gold-btn">Explore Our Menu →</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div>
+                <a href="home.html" class="footer-logo">PAAT PERE.</a>
+                <p>A Taste of Traditional Bengal.</p>
+            </div>
+            <div class="footer-links">
+                <a href="home.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© <span id="currentYear"></span> Paat Pere. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/contact.js"></script>
+</body>
+</html>

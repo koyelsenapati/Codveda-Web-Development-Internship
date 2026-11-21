@@ -1,0 +1,62 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600&display=swap');
+
+:root {
+  --sage: #98A086;
+  --sage-dark: #66735D;
+  --rose: #A76D5E;
+  --rose-dark: #925C4E;
+  --tan: #C4A071;
+  --beige: #DFCCB1;
+  --brown: #846044;
+  --ink: #30271F;
+  --muted: #82766A;
+  --surface: #FFFDF9;
+  --line: #EEE5D9;
+  --page: #F5F0E8;
+  --shadow: 0 8px 26px rgba(100,76,51,.07);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--ink);
+  background: var(--page);
+}
+
+button, input, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid var(--sage);
+  outline-offset: 2px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: var(--beige);
+  color: var(--ink);
+}

@@ -1,0 +1,162 @@
+
+/* Main Application Layout */
+.app-shell {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  align-items: stretch;
+}
+.app-layout {
+  flex: 1;
+  min-width: 0;
+  width: calc(100% - 250px);
+  min-height: 100vh;
+  padding: 28px 32px;
+  background: #f7f5fc;
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(260px, 0.8fr);
+  gap: 16px;
+  align-items: start;
+  margin-top: 16px;
+}
+.dashboard-main,
+.dashboard-side {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+/* Task Filter */
+.task-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 4px;
+}
+.task-filter h3 {
+  color: #302443;
+  font-size: 19px;
+}
+.task-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 23px;
+  height: 23px;
+  margin-left: 8px;
+  padding: 0 6px;
+  border-radius: 50%;
+  background: #eee7ff;
+  color: #7953c8;
+  font-size: 12px;
+}
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.filter-btn {
+  padding: 8px 14px;
+  border: 1px solid #e8e1f0;
+  border-radius: 20px;
+  background: #ffffff;
+  color: #81758f;
+  font-size: 12px;
+  transition: .2s ease;
+}
+.filter-btn:hover {
+  border-color: #7953c8;
+  color: #7953c8;
+}
+.filter-btn.active {
+  background: #7953c8;
+  color: #ffffff;
+  border-color: #7953c8;
+}
+
+/* Motivation Card */
+.motivation-card {
+  min-height: 220px;
+  padding: 25px 20px;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #fff4e8, #fff0dc);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.motivation-icon {
+  color: #f1b83c;
+  font-size: 34px;
+  margin-bottom: 14px;
+}
+.motivation-card h3 {
+  color: #302443;
+  font-size: 17px;
+  margin-bottom: 9px;
+}
+.motivation-card p {
+  color: #8e7b68;
+  font-size: 13px;
+  line-height: 1.6;
+  max-width: 230px;
+}
+.motivation-card span {
+  color: #a17a46;
+  font-size: 12px;
+  margin-top: 14px;
+}
+
+/* Large Screens */
+@media (min-width: 1500px) {
+  .app-layout {
+    padding: 35px 55px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-side {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .app-shell {
+    flex-direction: column;
+  }
+  .app-layout {
+    width: 100%;
+    padding: 20px 14px;
+  }
+}
+@media (max-width: 600px) {
+  .dashboard-side {
+    grid-template-columns: 1fr;
+  }
+  .task-filter {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+@media (max-width: 420px) {
+  .filter-options {
+    width: 100%;
+  }
+  .filter-btn {
+    padding: 7px 11px;
+  }
+}
