@@ -1,0 +1,12 @@
+{
+  "name": "paatpere-restaurant",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PaatPere Restaurant Website",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1"
+  },
+  "devDependencies": {
+    "vite": "^8.3.8"
+  }
+}
